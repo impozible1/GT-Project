@@ -1,1 +1,3 @@
 
+var example = {hellos: 121};
+object.keys(example);
