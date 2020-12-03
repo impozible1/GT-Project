@@ -1,9 +1,16 @@
 # About
 Ok nik, so this only for our GT project ok? 
 Nothing else. 
-All you have to do is type what you want the project to be about in the
-"pull requests" tab.
+This is just to store the source code for our project.
 
 # Rules
-Please only stick to HTML5 or JS,
+Please only stick to HTML5, JS, and CSS
 Anything else is not gonna cut it.
+
+-[ ] Find out what the GT Project is gonna be about
+
+-[ ] Program GT Project
+
+-[ ] Store source code for GT Project on Github.
+
+-[ ] Make Source Code Public!
