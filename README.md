@@ -14,3 +14,7 @@ Anything else is not gonna cut it.
 -[ ] Store source code for GT Project on Github.
 
 -[ ] Make Source Code Public!
+
+## Workplace
+
+[Go Here](https://playcode.io/)
