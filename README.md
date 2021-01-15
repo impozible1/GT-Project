@@ -7,14 +7,14 @@ This is just to store the source code for our project.
 Please only stick to HTML5, JS, and CSS
 Anything else is not gonna cut it.
 
--[ ] Find out what the GT Project is gonna be about
+-[_] Find out what the GT Project is gonna be about
 
--[ ] Program GT Project
+-[_] Program GT Project 
 
--[ ] Store source code for GT Project on Github.
+-[_] Store source code for GT Project on Github.
 
--[ ] Make Source Code Public!
+-[_] Make Source Code Public!
 
 ## Workplace
 
-[Go Here](https://playcode.io/)
+[Go Here](https://playcode.io/725166/)
