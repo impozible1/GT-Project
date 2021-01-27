@@ -12,14 +12,14 @@ canvas {
 <body bgcolor="black" onload="startGame()">
 <script>
 
-var myGamePiece;
+var player;
 
 function startGame() {
-    myGameArea.start();
-    myGamePiece = new component(30, 30, "white", 10, 120);
+    gameThing.start();
+    player = new component(30, 30, "white", 10, 120);
 }
 
-var myGameArea = {
+var gameThing = {
     canvas : document.createElement("canvas"),
     start : function() {
         this.canvas.width = 1500;
@@ -28,11 +28,11 @@ var myGameArea = {
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
         this.interval = setInterval(updateGameArea, 20);
         window.addEventListener('keydown', function (e) {
-            myGameArea.keys = (myGameArea.keys || []);
-            myGameArea.keys[e.keyCode] = (e.type == "keydown");
+            gameThing.keys = (gameThing.keys || []);
+            gameThing.keys[e.keyCode] = (e.type == "keydown");
         })
         window.addEventListener('keyup', function (e) {
-            myGameArea.keys[e.keyCode] = (e.type == "keydown");            
+            gameThing.keys[e.keyCode] = (e.type == "keydown");            
         })
     }, 
     clear : function(){
@@ -41,7 +41,7 @@ var myGameArea = {
 }
 
 function component(width, height, color, x, y) {
-    this.gamearea = myGameArea;
+    this.gamearea = gameThing;
     this.width = width;
     this.height = height;
     this.speedX = 0;
@@ -49,7 +49,7 @@ function component(width, height, color, x, y) {
     this.x = x;
     this.y = y;    
     this.update = function() {
-        ctx = myGameArea.context;
+        ctx = gameThing.context;
         ctx.fillStyle = color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
     }
@@ -60,15 +60,15 @@ function component(width, height, color, x, y) {
 }
 
 function updateGameArea() {
-    myGameArea.clear();
-    myGamePiece.speedX = 0;
-    myGamePiece.speedY = 0;    
-    if (myGameArea.keys && myGameArea.keys[37]) {myGamePiece.speedX = -2; }
-    if (myGameArea.keys && myGameArea.keys[39]) {myGamePiece.speedX = 2; }
-    if (myGameArea.keys && myGameArea.keys[38]) {myGamePiece.speedY = -2; }
-    if (myGameArea.keys && myGameArea.keys[40]) {myGamePiece.speedY = 2; }
-    myGamePiece.newPos();    
-    myGamePiece.update();
+    gameThing.clear();
+    player.speedX = 0;
+    player.speedY = 0;    
+    if (gameThing.keys && gameThing.keys[37]) {player.speedX = -2; }
+    if (gameThing.keys && gameThing.keys[39]) {player.speedX = 2; }
+    if (gameThing.keys && gameThing.keys[38]) {player.speedY = -2; }
+    if (gameThing.keys && gameThing.keys[40]) {player.speedY = 2; }
+    player.newPos();    
+    player.update();
 }
 </script>
 </body>
