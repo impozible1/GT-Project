@@ -1,75 +1,16 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<style>
-canvas {
-    border:0px solid #000000;
-    background-color: #000000;
-}
-</style>
-</head>
-<body bgcolor="black" onload="startGame()">
-<script>
-
-var player;
-
-function startGame() {
-    gameThing.start();
-    player = new component(30, 30, "white", 10, 120);
-}
-
-var gameThing = {
-    canvas : document.createElement("canvas"),
-    start : function() {
-        this.canvas.width = 1500;
-        this.canvas.height = 678;
-        this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-        this.interval = setInterval(updateGameArea, 20);
-        window.addEventListener('keydown', function (e) {
-            gameThing.keys = (gameThing.keys || []);
-            gameThing.keys[e.keyCode] = (e.type == "keydown");
-        })
-        window.addEventListener('keyup', function (e) {
-            gameThing.keys[e.keyCode] = (e.type == "keydown");            
-        })
-    }, 
-    clear : function(){
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
-    }
-}
-
-function component(width, height, color, x, y) {
-    this.gamearea = gameThing;
-    this.width = width;
-    this.height = height;
-    this.speedX = 0;
-    this.speedY = 0;    
-    this.x = x;
-    this.y = y;    
-    this.update = function() {
-        ctx = gameThing.context;
-        ctx.fillStyle = color;
-        ctx.fillRect(this.x, this.y, this.width, this.height);
-    }
-    this.newPos = function() {
-        this.x += this.speedX;
-        this.y += this.speedY;        
-    }    
-}
-
-function updateGameArea() {
-    gameThing.clear();
-    player.speedX = 0;
-    player.speedY = 0;    
-    if (gameThing.keys && gameThing.keys[37]) {player.speedX = -2; }
-    if (gameThing.keys && gameThing.keys[39]) {player.speedX = 2; }
-    if (gameThing.keys && gameThing.keys[38]) {player.speedY = -2; }
-    if (gameThing.keys && gameThing.keys[40]) {player.speedY = 2; }
-    player.newPos();    
-    player.update();
-}
-</script>
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>
+  <div id="game">
+    <div id="character"></div>
+    <div id="block"></div>
+  </div>
+    <script src="script.js"></script>
+  </body>
 </html>
