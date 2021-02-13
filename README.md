@@ -7,11 +7,11 @@ This is just to store the source code for our project.
 Please only stick to HTML5, JS, and CSS
 Anything else is not gonna cut it.
 
--[_] Find out what the GT Project is gonna be about
+-[x] Find out what the GT Project is gonna be about
 
--[_] Program GT Project 
+-[x] Program GT Project 
 
--[_] Store source code for GT Project on Github.
+-[x] Store source code for GT Project on Github.
 
 -[_] Make Source Code Public!
 
