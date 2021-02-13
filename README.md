@@ -17,4 +17,4 @@ Anything else is not gonna cut it.
 
 ## Workplace
 
-[Go Here](https://repl.it/@impozible1/Thing#index.html)
+[Go Here](https://repl.it/@impozible1/Game-For-GT#index.html)
