@@ -1,5 +1,6 @@
 var character = document.getElementById("character");
 document.addEventListener("click", jump);
+document.addEventListener("keydown", jump);
 function jump(){
   if(character.classList == "animate"){return;}
   character.classList.add("animate");
@@ -9,7 +10,9 @@ function removeJump(){
   character.classList.remove("animate");
 }
 
-var block = document.getElementById("block");
+
+
+var enemy = document.getElementById("block");
 function checkDead(){
   let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
   let blockLeft = parseInt(window.getComputedStyle(block).getPropertyValue("left"));
@@ -18,4 +21,5 @@ function checkDead(){
   }
 }
 
-setInterval(checkDead, 10);
+setInterval(checkDead, 30);
+
