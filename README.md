@@ -1,5 +1,5 @@
 # About
-This our game for GT.
+This is our game for GT.
 
 
 ## Our Repl.it:
