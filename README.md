@@ -1,6 +1,9 @@
 # About
 This is our game for GT.
 
+The controls are any key.
+
+Feedback would be appreciated!
 
 ## Our Repl.it:
 
@@ -10,3 +13,4 @@ This is our game for GT.
 ## The Game (Which you probably came for)
 
 [Go Here](https://game-for-gt.impozible1.repl.co/)
+
